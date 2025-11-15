@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pollen Çiçekcilik - Taze Çiçek Düzenlemeleri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --primary: 332;
+        --primary-sat: 81%;
+        --primary-light: 50%;
+        --secondary: 142;
+        --secondary-sat: 71%;
+        --secondary-light: 45%;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-40 w-full border-b border-gray-200 bg-white/95 backdrop-blur"
+    >
+      <div
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-16 h-16 rounded-full bg-gradient-to-br from-rose-100 to-pink-100 flex items-center justify-center shadow-md overflow-hidden"
+          >
+            <img
+              src="assets/logo.jpeg"
+              alt="Pollen Çiçekcilik Logo"
+              class="w-20 h-20 object-cover"
+            />
+          </div>
+          <h1 class="text-2xl font-bold text-gray-800">Pollen Çiçekcilik</h1>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            href="#products"
+            class="text-gray-700 hover:text-pink-500 transition-colors"
+            >Ürünler</a
+          >
+          <a
+            href="#about"
+            class="text-gray-700 hover:text-pink-500 transition-colors"
+            >Hakkında</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 hover:text-pink-500 transition-colors"
+            >İletişim</a
+          >
+          <a
+            href="https://www.instagram.com/atasehircicekcisi/"
+            target="_blank"
+            class="text-gray-700 hover:text-pink-500 transition-colors"
+            >Instagram</a
+          >
+        </nav>
+        <!-- Mobile Menu Button -->
+        <button
+          onclick="toggleMobileMenu()"
+          class="md:hidden text-gray-700 hover:text-pink-500 transition-colors"
+          aria-label="Menü"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white border-t border-gray-200"
+      >
+        <nav class="px-4 py-4 space-y-3">
+          <a
+            href="#products"
+            onclick="toggleMobileMenu()"
+            class="block text-gray-700 hover:text-pink-500 transition-colors py-2"
+            >Ürünler</a
+          >
+          <a
+            href="#about"
+            onclick="toggleMobileMenu()"
+            class="block text-gray-700 hover:text-pink-500 transition-colors py-2"
+            >Hakkında</a
+          >
+          <a
+            href="#contact"
+            onclick="toggleMobileMenu()"
+            class="block text-gray-700 hover:text-pink-500 transition-colors py-2"
+            >İletişim</a
+          >
+          <a
+            href="https://www.instagram.com/atasehircicekcisi/"
+            target="_blank"
+            onclick="toggleMobileMenu()"
+            class="block text-gray-700 hover:text-pink-500 transition-colors py-2"
+            >Instagram</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative overflow-hidden bg-gradient-to-br from-rose-50 to-pink-50 py-20 md:py-32"
+    >
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute top-0 right-0 w-96 h-96 bg-rose-200/30 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 left-0 w-96 h-96 bg-green-200/30 rounded-full blur-3xl"
+        ></div>
+      </div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2
+            class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight"
+          >
+            Her Anı Taze Çiçeklerle Kutlayın
+          </h2>
+          <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Doğanın zarafetini modern tasarımlarla buluşturduğumuz özel çiçek
+            aranjmanlarımızı keşfedin. Özenle seçilen taze çiçeklerle hazırlanan
+            buketlerimiz, sevdiklerinize duygularınızı en zarif şekilde
+            iletmeniz için tasarlandı.
+          </p>
+          <a
+            href="#products"
+            class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
+            Ürünlerimizi Keşfedin
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h3
+          class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-16"
+        >
+          Neden Bizi Seçmelisiniz
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Box 1 -->
+          <div
+            class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:border-pink-300 transition-all"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png"
+              alt="Usta Ellerde Hazırlık"
+              class="w-12 h-12 mb-4"
+            />
+            <h4 class="text-xl font-bold text-gray-800 mb-3">
+              Usta Ellerde Hazırlık
+            </h4>
+            <p class="text-gray-600 leading-relaxed">
+              Her çiçek aranjmanı, alanında uzman ve deneyimli floristlerimiz
+              tarafından özenle hazırlanır. Renk uyumu, çiçek seçimi ve estetik
+              kompozisyon konusundaki titiz yaklaşımımız sayesinde,
+              sevdiklerinize gönderilecek her buket adeta bir sanat eserine
+              dönüşür.
+            </p>
+          </div>
+
+          <!-- Box 2 -->
+          <div
+            class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:border-pink-300 transition-all"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2190/2190525.png"
+              alt="Taze Çiçekler"
+              class="w-12 h-12 mb-4"
+            />
+            <h4 class="text-xl font-bold text-gray-800 mb-3">
+              %100 Tazelik Garantisi
+            </h4>
+            <p class="text-gray-600 leading-relaxed">
+              Çiçeklerimiz her gün sabah erken saatlerde toptancıdan temin
+              edilir ve soğuk hava depolarımızda muhafaza edilir. Siparişiniz
+              alındığı anda hazırlanır, böylece size en taze ve en canlı
+              çiçekler ulaşır. Tazelik garantimizle gönül rahatlığı içinde
+              sipariş verebilirsiniz.
+            </p>
+          </div>
+
+          <!-- Box 3 -->
+          <div
+            class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:border-pink-300 transition-all"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"
+              alt="Hızlı Teslimat"
+              class="w-12 h-12 mb-4"
+            />
+            <h4 class="text-xl font-bold text-gray-800 mb-3">
+              Aynı Gün Teslimat
+            </h4>
+            <p class="text-gray-600 leading-relaxed">
+              Ataşehir ve çevre ilçelerde aynı gün içinde teslimat garantisi
+              sunuyoruz. WhatsApp üzerinden 7/24 müşteri desteği ve anlık
+              sipariş takibi ile özel günlerinizi asla kaçırmazsınız.
+              Sürprizleriniz tam zamanında, eksiksiz ve özenle teslim edilir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 md:py-24 bg-rose-50/50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h3
+          class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-4"
+        >
+          Hizmetlerimiz
+        </h3>
+        <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+          Özel anlarınız için tasarlanmış çiçek düzenlemeleri
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product 1 -->
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/gul.webp"
+                alt="Gül Zarafeti"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Gül Zarafeti</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Klasik zarafet ve tutkunun simgesi. Her bir gül özenle seçilmiş,
+                taze ve canlı. Sevgi, romantizm ve özel anlar için mükemmel bir
+                seçim.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Gül Zarafeti', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/aycicegi.webp"
+                alt="Ayçiçeği Sevinci"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                Ayçiçeği Sevinci
+              </h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Pozitif enerji ve mutluluğun habercisi. Ayçiçekleri neşe dolu
+                anlarınızı aydınlatır ve sevdiklerinize iyimserlik taşır. Her
+                gün yeni bir başlangıç için ideal.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Ayçiçeği Sevinci', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/papatya.webp"
+                alt="Papatya"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Papatya</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Saflık ve temizliğin sembolü. Papatyalar sadece bir çiçek değil,
+                doğallığın ve içtenliğin ifadesidir. Samimi duygularınızı
+                paylaşmanın en tatlı yolu.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Papatya', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/kasimpati.webp"
+                alt="Kasımpatı Buketi"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                Kasımpatı Buketi
+              </h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Sonbaharın sıcak renkleriyle dolu büyüleyici kasımpatları. Uzun
+                ömürlü ve dayanıklı yapısıyla evinize veya ofisinize şıklık
+                katar.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Kasımpatı Buketi', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/orkide.webp"
+                alt="Orkide"
+                class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Orkide</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Egzotik güzellik ve zarafetin simgesi. Orkideler sofistike bir
+                hediye arayanlar için ideal. Uzun süre açık kalır ve her ortama
+                lüks bir dokunuş katar.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Orkide', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/aranjman.webp"
+                alt="Özel Aranjmanlar"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                Özel Aranjmanlar
+              </h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Size özel tasarlanmış benzersiz çiçek aranjmanları. İstekleriniz
+                doğrultusunda hazırlanan, tamamen kişiselleştirilmiş tasarımlar
+                sunuyoruz.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Özel Aranjmanlar', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/celenk.webp"
+                alt="Özel Gün Çelenkleri"
+                class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                Özel Gün Çelenkleri
+              </h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Açılış, tören ve özel günler için hazırlanan gösterişli
+                çelenkler. Saygınızı ve kutlamalarınızı en etkileyici şekilde
+                ifade edin.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Özel Gün Çelenkleri', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/lilyum.webp"
+                alt="Lilyum"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Lilyum</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Zarafet ve gösterişin bir arada olduğu lilyumlar. Büyük
+                çiçekleri ve hoş kokusuyla her ortamda dikkat çeken, unutulmaz
+                bir hediye.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Lilyum', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 9 -->
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/arabasusleme.webp"
+                alt="Araba Süsleme"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                Araba Süsleme
+              </h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Düğün araçlarınız için özel tasarım çiçek süslemeleri. Büyük
+                gününüzü daha da özel kılmak için zarif ve gösterişli araba
+                süsleme hizmeti sunuyoruz.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Araba Süsleme', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 10 -->
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/lale.webp"
+                alt="Lale"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Lale</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                İncelik ve zarafetin sembolü laleler. Baharın müjdecisi olan bu
+                eşsiz çiçekler, renkli ve canlı görünüşleriyle ortamınıza neşe
+                katar.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Lale', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 11 -->
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/sakayik.webp"
+                alt="Özel Şakayık Buketi"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                Özel Şakayık Buketi
+              </h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Romantizm ve zarafetin doruk noktası şakayıklar. Yumuşak
+                yaprakları ve büyüleyici renkleriyle en özel anlarınızı
+                taçlandırır.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Özel Şakayık Buketi', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 12 -->
+          <div
+            class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="relative overflow-hidden bg-gray-200 h-80">
+              <img
+                src="assets/ozelgun.webp"
+                alt="Özel Gün Hediyeleri – Doğum Günü, Yıldönümü ve Kutlamalar İçin Seçkin Çiçek ve Hediyeler"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                Özel Gün Hediyeleri
+              </h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Sevdiklerinize doğum günü, yıldönümü veya özel kutlamalar için
+                özenle hazırlanmış çiçek ve hediyelerle unutulmaz anlar yaşatın.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  onclick="openWhatsApp('Özel Gün Hediyeleri', '')"
+                  class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span class="text-sm font-medium">WhatsApp'a Aktar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h3
+            class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center"
+          >
+            Pollen Çiçekcilik Hakkında
+          </h3>
+
+          <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+            <p>
+              Pollen Çiçekcilik, Ataşehir'de çiçek sanatının en güzel
+              örneklerini sunmakta olan bir işletmedir. Her çiçek bir duygudur,
+              her düzenleme bir sanat eseridir. Ülkenin en iyi bahçelerinden
+              seçtiğimiz taze çiçekleri, deneyimli çiçekçilerimiz tarafından
+              titizlikle tasarlarız.
+            </p>
+
+            <p>
+              Düğünlerden, doğum günlerine, yıldönümlerinden hasta ziyaretlerine
+              kadar tüm özel anlarınız için çözüm sağlarız. Müşteri memnuniyeti,
+              kalite ve samimiyetimiz sayesinde Ataşehir'in en sevildiği
+              çiçekçisi haline geldik. WhatsApp'ı kullanarak bize kolayca
+              ulaşabilir ve her soruna hızlı çözüm sunmamızı sağlayabilirsiniz.
+            </p>
+          </div>
+
+          <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div class="bg-pink-50 p-6 rounded-lg">
+              <p class="text-4xl font-bold text-pink-500 mb-2">5+</p>
+              <p class="text-gray-600">Yıl Deneyim</p>
+            </div>
+            <div class="bg-pink-50 p-6 rounded-lg">
+              <p class="text-4xl font-bold text-pink-500 mb-2">10K+</p>
+              <p class="text-gray-600">Mutlu Müşteri</p>
+            </div>
+            <div class="bg-pink-50 p-6 rounded-lg">
+              <p class="text-4xl font-bold text-pink-500 mb-2">100%</p>
+              <p class="text-gray-600">Müşteri Memnuniyeti</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-16 md:py-24 bg-gradient-to-br from-rose-50 to-pink-50"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            İletişime Geçin
+          </h3>
+          <p class="text-lg text-gray-600 mb-8">
+            Sorularınız veya özel istekleriniz mi var. WhatsApp'ta bize ulaşın!
+          </p>
+          <div class="bg-white p-8 rounded-lg border border-gray-200">
+            <p class="text-gray-600 mb-4">
+              Doğrudan sohbet etmek için WhatsApp'ı açın
+            </p>
+            <button
+              onclick="openWhatsApp('', '')"
+              class="inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+            >
+              WhatsApp'ta İletişime Geçin
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h3
+          class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-4"
+        >
+          Konumumuz
+        </h3>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          Ataşehir'de bulunan mağazamızı ziyaret edin veya çevrimiçi sipariş
+          vermek için bize ulaşın
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div class="bg-pink-50 p-8 rounded-lg">
+            <h4 class="text-2xl font-bold text-gray-800 mb-6">Adres</h4>
+            <div class="space-y-4">
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Fiziksel Adres</p>
+                <p class="text-lg font-semibold text-gray-800">
+                  İçerenköy, Karslı Ahmet Cd. No:20/C<br />
+                  34638 Ataşehir/İstanbul
+                </p>
+              </div>
+              <div class="border-t border-gray-300 pt-4">
+                <p class="text-sm text-gray-600 mb-1">Telefon</p>
+                <p class="text-lg font-semibold text-gray-800">
+                  +90 551 347 34 58
+                </p>
+              </div>
+              <div class="border-t border-gray-300 pt-4">
+                <p class="text-sm text-gray-600 mb-1">Çalışma Saatleri</p>
+                <p class="text-lg font-semibold text-gray-800">
+                  Pazartesi - Pazar<br />
+                  08:00 - 21:00
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14cac7ee2fd683d5:0x26afd5c1d19eb5c2?sa=X&ved=1t:8290&ictx=111"
+              target="_blank"
+              class="inline-block mt-6 bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-lg transition-colors duration-200 font-semibold"
+            >
+              Google Maps'te Aç
+            </a>
+          </div>
+
+          <div class="rounded-lg overflow-hidden shadow-lg h-96">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.3897899999997!2d29.1167!3d40.9867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7e0e0e0e0e0%3A0x0!2zS2Fyc2zEsSBBaG1ldCBDZC4gTm86MjAvQywgMzQ2MzggQXRhxZ9laGlyL8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1234567890"
+              width="100%"
+              height="400"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Pollen Çiçekçilik Konumu"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-white border-t border-gray-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center gap-4 mb-6">
+          <a
+            href="https://www.instagram.com/atasehircicekcisi/"
+            target="_blank"
+            class="inline-flex items-center gap-2 text-pink-500 hover:text-pink-600 transition-colors font-semibold"
+          >
+            Instagram: @atasehircicekcisi
+          </a>
+        </div>
+        <p class="text-center text-gray-600">
+          &copy; 2025 Pollen Çiçekcilik. Tüm hakları saklıdır. En özel
+          anılarınızda yanınızda.
+        </p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <button
+      onclick="openWhatsApp('', '')"
+      class="fixed bottom-8 right-8 bg-white hover:bg-green-500 text-green-500 hover:text-white rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center"
+      title="WhatsApp'ta bize ulaşın"
+    >
+      <svg
+        width="24px"
+        height="24px"
+        viewBox="0 0 24 24"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="currentColor"
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+        />
+      </svg>
+    </button>
+
+    <script>
+      const WHATSAPP_NUMBER = "+905513473458";
+
+      function openWhatsApp(productName, productImage) {
+        let message;
+        if (productName) {
+          message = `Merhaba! ${productName} çiçeğini sipariş etmek istiyorum.\n\n${productImage}`;
+        } else {
+          message = "Merhaba iyi günler";
+        }
+
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+        window.open(whatsappUrl, "_blank");
+      }
+    </script>
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("hidden"); // hidden sınıfını açıp kapatır
+      }
+    </script>
+  </body>
+</html>
